@@ -30,7 +30,7 @@ void st_push(stack_t **head, unsigned int count)
 	new->n = atoi(args);
 	new->prev = NULL;
 	new->next = *head;
-	if (!*head)
+	if (*head != NULL)
 		(*head)->prev = new;
 	*head = new;
 }
@@ -49,15 +49,11 @@ void st_pall(stack_t **head, unsigned int count)
 
 	he = *head;
 	if (he == NULL || *head == NULL)
-	{
 		return; /* Stack is empty */
-	}
-	else
+
+	while(he != NULL)
 	{
-		while(!he)
-		{
-			printf("%d\n", he->n);
-			he = he->next;
-		}
+		printf("%d\n", he->n);
+		he = he->next;
 	}
 }
