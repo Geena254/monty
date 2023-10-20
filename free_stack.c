@@ -1,4 +1,4 @@
-#include "montyprog.h"
+#include "monty.h"
 
 /**
  * free_stack - Function to free a stack.

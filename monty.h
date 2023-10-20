@@ -9,6 +9,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdarg.h>
 
 /* system status */
 int exitstatus;
@@ -43,12 +44,16 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+int main(int argc, char **argv);
 void st_pall(stack_t **head, unsigned int count);
 void st_push(stack_t **head, unsigned int count);
 void execute_inst(char *opcode, unsigned int line_num, stack_t **stack);
-void free_stack(stack_t **stack);
-int main(int argc, char **argv);
-int is_int(const char *string);
 ssize_t my_getline(char **line_ptr, size_t *buff_size, FILE *filestream);
+
+/* free function */
+void free_stack(stack_t **stack);
+
+/* util function */
+int is_int(const char *string);
 
 #endif /* _MONTY_H */

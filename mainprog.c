@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "montyprog.h"
+#include "monty.h"
 
 /**
  * main - The entry point to start interpreter for Monty ByteCodes files.

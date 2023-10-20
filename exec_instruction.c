@@ -1,4 +1,4 @@
-#include "montyprog.h"
+#include "monty.h"
 
 /**
  * execute_inst - Function to execute Monty ByteCodes.

@@ -1,4 +1,4 @@
-#include "montyprog.h"
+#include "monty.h"
 
 /**
  * st_push - to push new element in the stack

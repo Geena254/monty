@@ -1,4 +1,4 @@
-#include "montyprog.h"
+#include "monty.h"
 
 /**
  * is_int - check that string is int.
