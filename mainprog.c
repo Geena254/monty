@@ -44,7 +44,6 @@ int main(int argc, char **argv)
 	fclose(opcode_fil);
 	if (exitstatus == -1) /* Exit with the appropriate status */
 	{
-		fprintf(stderr, "Error encountered during execution\n");
 		exit(EXIT_FAILURE);
 	}
 	return (0);
