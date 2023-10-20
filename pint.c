@@ -20,7 +20,6 @@ void st_pint(stack_t **head, unsigned int count)
 		exitstatus = -1;
 		return;
 	}
-
 	/* Print the top element of the stack */
 	printf("%d\n", (*head)->n);
 }
