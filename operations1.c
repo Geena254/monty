@@ -15,7 +15,7 @@ void st_push(stack_t **head, unsigned int count)
 	if (args == NULL || !is_int(args))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", count);
-		exitstatus = -1;
+		exitstatus = EXIT_FAILURE;
 		return;
 	}
 
@@ -23,7 +23,7 @@ void st_push(stack_t **head, unsigned int count)
 	if (new == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		exitstatus = -1;
+		exitstatus = EXIT_FAILURE;
 		return;
 	}
 

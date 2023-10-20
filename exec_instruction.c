@@ -15,6 +15,9 @@ void execute_inst(char *opcode, unsigned int line_num, stack_t **stack)
 		{"pall", st_pall},
 		{"pint", st_pint},
 		{"pop", st_pop},
+		{"pop", st_pop},
+		{"swap", st_swap},
+		{"add", st_add},
 		{NULL, NULL},
 	};
 

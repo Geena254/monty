@@ -9,6 +9,7 @@
 void st_pop(stack_t **head, unsigned int count)
 {
 	stack_t *node_to_pop;
+
 	/* Check if the stack is empty or invalid */
 	if (head == NULL || *head == NULL)
 	{

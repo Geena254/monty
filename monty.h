@@ -2,6 +2,7 @@
 #define _MONTY_H
 
 /* libraries */
+#define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -49,6 +50,9 @@ void st_pall(stack_t **head, unsigned int count);
 void st_push(stack_t **head, unsigned int count);
 void st_pint(stack_t **head, unsigned int count);
 void st_pop(stack_t **head, unsigned int count);
+void st_nop(stack_t **head, unsigned int counter);
+void st_add(stack_t **head, unsigned int count);
+void st_swap(stack_t **head, unsigned int count);
 void execute_inst(char *opcode, unsigned int line_num, stack_t **stack);
 ssize_t my_getline(char **line_ptr, size_t *buff_size, FILE *filestream);
 
