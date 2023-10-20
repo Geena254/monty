@@ -76,15 +76,8 @@ ssize_t my_getline(char **line_ptr, size_t *buff_size, FILE *filestream)
 	}
 	if (posi == 0)
 		return (-1); /* Empty line */
+
 	(*line_ptr)[posi] = '\0';
-	new_lineptr = malloc(posi + 1);
-	if (new_lineptr == NULL)
-	{
-		free(*line_ptr);
-		return (alloc_err()); /* Handle allocation error */
-	}
-	memcpy(new_lineptr, *line_ptr, posi + 1);
-	free(*line_ptr);
-	*line_ptr = new_lineptr;
+
 	return (posi + 1);
 }

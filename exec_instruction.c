@@ -36,4 +36,7 @@ void execute_inst(char *opcode, unsigned int line_num, stack_t **stack)
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_num, opcode);
 	exitstatus = -1;
+
+	if (strcmp(opcode, "push") == 0)
+		free(*stack);
 }
