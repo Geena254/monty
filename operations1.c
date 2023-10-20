@@ -51,7 +51,7 @@ void st_pall(stack_t **head, unsigned int count)
 	if (he == NULL || *head == NULL)
 		return; /* Stack is empty */
 
-	while(he != NULL)
+	while (he != NULL)
 	{
 		printf("%d\n", he->n);
 		he = he->next;

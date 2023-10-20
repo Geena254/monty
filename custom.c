@@ -5,7 +5,6 @@
  * @string: string to check it.
  * Return: 0 if not and retuen 1 if all is digits.
  */
-
 int is_int(const char *string)
 {
 	if (*string == '-')
@@ -27,7 +26,6 @@ int is_int(const char *string)
  * alloc_err - Function that prints an error message.
  * Return: -1
  */
-
 int alloc_err(void)
 {
 	fprintf(stderr, "Error: malloc failed\n");
@@ -38,11 +36,10 @@ int alloc_err(void)
 /**
  * my_getline - Function clone to getline() function.
  * @line_ptr: buffer to write data to.
- * @buff-size: Initial buffer size.
+ * @buff_size: Initial buffer size.
  * @filestream: File to read from.
  * Return: The length of line.
  */
-
 ssize_t my_getline(char **line_ptr, size_t *buff_size, FILE *filestream)
 {
 	size_t posi = 0;
@@ -76,7 +73,6 @@ ssize_t my_getline(char **line_ptr, size_t *buff_size, FILE *filestream)
 	}
 	if (posi == 0)
 		return (-1); /* Empty line */
-
 	(*line_ptr)[posi] = '\0';
 	new_lineptr = malloc(posi + 1);
 	if (new_lineptr == NULL)
@@ -85,6 +81,5 @@ ssize_t my_getline(char **line_ptr, size_t *buff_size, FILE *filestream)
 	memcpy(new_lineptr, *line_ptr, posi + 1);
 	free(*line_ptr);
 	*line_ptr = new_lineptr;
-
 	return (posi + 1);
 }

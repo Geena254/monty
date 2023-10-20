@@ -19,6 +19,6 @@ void st_pop(stack_t **head, unsigned int count)
 
 	/* Get a reference to the node to be popped */
 	node_to_pop = *head;
-	(*head) = node_to_pop->next; /* Update the stack to point to the next element */
+	(*head) = node_to_pop->next; /* Update the stack to point to next element */
 	free(node_to_pop); /* Free the memory of the popped node */
 }
