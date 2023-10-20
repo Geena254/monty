@@ -47,6 +47,8 @@ typedef struct instruction_s
 int main(int argc, char **argv);
 void st_pall(stack_t **head, unsigned int count);
 void st_push(stack_t **head, unsigned int count);
+void st_pint(stack_t **head, unsigned int count);
+void st_pop(stack_t **head, unsigned int count);
 void execute_inst(char *opcode, unsigned int line_num, stack_t **stack);
 ssize_t my_getline(char **line_ptr, size_t *buff_size, FILE *filestream);
 

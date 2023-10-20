@@ -13,6 +13,8 @@ void execute_inst(char *opcode, unsigned int line_num, stack_t **stack)
 	instruction_t insts[] = {
 		{"push", st_push},
 		{"pall", st_pall},
+		{"pint", st_pint},
+		{"pop", st_pop},
 		{NULL, NULL},
 	};
 
